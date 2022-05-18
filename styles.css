@@ -164,7 +164,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 10px;
     cursor: pointer;
     flex-shrink: 0;
 }
@@ -201,14 +201,14 @@ body{
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
 }
 .chat__info > .chat__info-lst-msg{
     width: 60vw;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 13px;
+    font-size: 14px;
     color: #484848;
 }
 
