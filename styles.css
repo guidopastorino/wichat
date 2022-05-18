@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: sans-serif;
+    background: #cecece;
+}
+
+.nav-brand{
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+}
+
+.nav-brand__logo > a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 7px;
+}
+
+.nav-brand__logo > a > i{
+    font-size: 28px;
+}
+
+.nav-brand__logo > a > span{
+    font-size: 16px;
+}
+
+.nav-brand__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-brand__btn > input{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav-brand__btn > button{
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    pointer-events: none;
+}
+
+/*  */
+
+.navbar{
+    width: 100%;
+    height: 35px;
+    background: #007bff;
+}
+
+.navbar > nav{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar > nav > ul{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    list-style: none;
+    column-gap: 5px;
+}
+
+.navbar > nav > ul > li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar > nav > ul > li > input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navbar > nav > ul > li > input::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .2s;
+    z-index: 100;
+}
+
+.navbar > nav > ul > li > span{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* ipt:checked */
+.navbar > nav > ul > li > input:checked::after{
+    opacity: 1;
+}
+
+/* chats */
+.chats{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 85px;
+    left: -100%;
+    transition: all .1s;
+    z-index: 5;
+    overflow-y: scroll;
+    /*  */
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 85px;
+}
+
+.chats::-webkit-scrollbar{
+    width: 5px;
+}
+
+.chats:hover::-webkit-scrollbar-thumb{
+    background: #8080807a;
+}
+
+.chat{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.chat:hover{
+    background: #cecece3b;
+}
+
+.chat__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat__image > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat__info{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.chat__info > .chat__info-title{
+    width: 60vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 15px;
+}
+.chat__info > .chat__info-lst-msg{
+    width: 60vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #484848;
+}
+
+.chat__date{
+    font-size: 11.5px;
+    color: #48484892;
+    font-weight: bold;
+    white-space: nowrap;
+    align-self: flex-start;
+    padding-top: 4px;
+}
+
+.navbar > nav > ul > li > input:checked ~ .chats{
+    left: 0;
+}
+
+/* status */
+.status{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    top: 85px;
+    bottom: -100vh;
+    transition: all .1s;
+    z-index: 4;
+    color: #fff;
+    overflow-y: scroll;
+}
+
+.navbar > nav > ul > li > input:checked ~ .status{
+    bottom: 0;
+}
+
+/* settings */
+.settings{
+    width: 100%;
+    height: 100vh;
+    background: #345;
+    position: fixed;
+    top: 85px;
+    right: -100%;
+    transition: all .1s;
+    z-index: 5;
+    overflow-y: scroll;
+}
+
+.navbar > nav > ul > li > input:checked ~ .settings{
+    right: 0;
+}
+
+/*  */
